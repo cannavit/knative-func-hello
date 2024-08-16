@@ -1,12 +1,12 @@
-FUNC_NAME=hello 
+FUNC_NAME=test 
 REGISTRY=ghcr.io/cannavit/knative-func-hello
-NAMESPACE="test"
+NAMESPACE=default
 
 
 create-function:
 	func create -l python ${FUNC_NAME}
 
-setup-python-env:
+setup:
 	pyenv local 3.12
 	python -m venv ./${FUNC_NAME}/venv && source \
 	./${FUNC_NAME}/bin/activate
@@ -34,7 +34,7 @@ build:
 
 deploy: 
 	echo "Generate token from github to authenticate"
-	cd ${FUNC_NAME} && func deploy --registry=${REGISTRY} 
+	cd ${FUNC_NAME} && func deploy --namespace=${NAMESPACE} --registry=${REGISTRY} 
 
 invoke:
 	cd ${FUNC_NAME} && func invoke

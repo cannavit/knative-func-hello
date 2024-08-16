@@ -1,3 +1,7 @@
+# specVersion: 0.36.0
+# name: hello
+# runtime: python
+# created: 2024-08-16T14:20:54.651703+02:00
 specVersion: 0.36.0
 name: hello
 runtime: python
@@ -5,9 +9,9 @@ registry: ghcr.io/cannavit/knative-func-hello
 created: 2024-08-15T21:55:23.738807+02:00
 build:
   git:
-    url:  https://github.com/cannavit/knative-func-hello.git   # required, git repository with the function source code
-    revision: main                                    # optional, git revision to be used (branch, tag, commit)
-    contextDir: hello                          # optional, needed only if the function is not located in the repository root folder
+    url:  https://github.com/cannavit/knative-func-hello.git  
+    revision: main                                  
+    contextDir: hello                       
   buildpacks: []
   builder: ""
   buildEnvs: []
