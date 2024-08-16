@@ -6,7 +6,7 @@ build:
   git:
     url: https://github.com/cannavit/knative-func-hello.git   # Repositorio con el código fuente de la función
     revision: main                                    # Revisión a ser usada (branch, tag, commit)
-    contextDir: test                          # Directorio de contexto si la función no está en la raíz del repo
+    contextDir: hello-py                          # Directorio de contexto si la función no está en la raíz del repo
   build:
     builder: docker
     buildpacks: []  # Asegúrate de que no hay buildpacks definidos, ya que estamos usando Dockerfile

@@ -18,4 +18,12 @@ func deploy --remote --registry ghcr.io/cannavit/knative-func-hello --git-url ht
 
 # TESTING BUIDS 
 
-kn func deploy --remote --builder s2i --registry ghcr.io/cannavit --git-url https://github.com/cannavit/knative-func-hello.git -p hello
+kn func deploy --remote --builder s2i --registry ghcr.io/cannavit --git-url https://github.com/cannavit/knative-func-hello.git -p hello-py
+
+
+kn func deploy --remote --registry ghcr.io/cannavit --git-url https://github.com/cannavit/knative-func-hello.git -p test
+
+
+
+# CONFIGURAR ARUIQTECTURA CORRECTA CON 
+    docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
