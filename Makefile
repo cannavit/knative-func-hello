@@ -3,7 +3,7 @@ REGISTRY=ghcr.io/cannavit/knative-func-hello
 NAMESPACE=default
 
 
-create-function:
+create:
 	func create -l python ${FUNC_NAME}
 
 setup:
