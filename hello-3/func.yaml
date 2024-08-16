@@ -1,0 +1,12 @@
+specVersion: 0.36.0
+name: hello-3
+runtime: python
+registry: ghcr.io/cannavit
+image: ghcr.io/cannavit/hello:latest
+namespace: default
+created: 2024-08-16T23:06:21.913865+02:00
+build:
+  builder: s2i
+deploy:
+  namespace: default
+  image: ghcr.io/cannavit/hello@sha256:ce94732322088847e609f1561688b13f792eb9a4786a161170cc9116306274c7
