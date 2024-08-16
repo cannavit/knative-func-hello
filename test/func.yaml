@@ -1,12 +1,12 @@
 specVersion: 0.36.0
 name: test
-runtime: python
-created: 2024-08-16T19:57:32.995945+02:00
+runtime: go
+created: 2024-08-16T20:27:28.702015+02:00
 build:
   git:
-    url: https://github.com/cannavit/knative-func-hello.git  # required, git repository with the function source code
+    url: https://github.com/cannavit/knative-func-hello.git   # required, git repository with the function source code
     revision: main                                    # optional, git revision to be used (branch, tag, commit)
-    contextDir: test                          # optional, needed only if the function is not located in the repository root folder
+    # contextDir: myfunction                          # optional, needed only if the function is not located in the repository root folder
   buildpacks: []
   builder: ""
   buildEnvs: []
