@@ -1,0 +1,17 @@
+specVersion: 0.36.0
+name: hello-py
+runtime: python
+created: 2024-08-16T20:32:49.983183+02:00
+build:
+  git:
+    url: https://github.com/cannavit/knative-func-hello.git   # Repositorio con el código fuente de la función
+    revision: main                                    # Revisión a ser usada (branch, tag, commit)
+    contextDir: test                          # Directorio de contexto si la función no está en la raíz del repo
+  build:
+    builder: docker
+    buildpacks: []  # Asegúrate de que no hay buildpacks definidos, ya que estamos usando Dockerfile
+    dockerfile: Dockerfile  # Indica que se usará el Dockerfile personalizado
+  buildEnvs: []
+deploy:
+  registry: ghcr.io/cannavit
+  image: ghcr.io/cannavit/knative-func-hello:latest
