@@ -15,3 +15,5 @@ build:
 deploy:
   registry: ghcr.io/cannavit
   image: ghcr.io/cannavit/knative-func-hello:latest
+  imagePullSecrets:
+    - name: container-registry
